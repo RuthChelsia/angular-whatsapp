@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "whatsapp-c6213": {
+      "hosting": {
+        "whatsapp": [
+          "whatsapp-c6213"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "whatsapp-c6213"
+  }
+}

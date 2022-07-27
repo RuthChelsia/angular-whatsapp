@@ -1,0 +1,39 @@
+<div id="sidebar"*ngFor="let message of messageList">
+   
+                
+    <div id="row1">
+        <div id="sidebarHeader"  >
+             <div class="avatarContainer"> 
+                <img mat-card-avatar   src="{{message.profilePic}}">
+                 </div>
+                
+                
+            
+            <div class="senderName">{{ message.name }}</div>
+        </div>   
+        
+        <div id="searchBox">
+            <img width="19" src="../../assets/searchIcon.png" />
+            <input type="text" placeholder="Search or start the new chat" />
+        </div>
+        
+    <div id="sidebarContent">
+       
+                <div class="conversation" *ngFor="let  send of message.senders"  (click)="onClick(send)">
+                    <div class="picture">
+                        <img mat-card-avatar [src]="send.displayPic">
+                        
+                    </div>
+                 <div class="content">
+                    <div class="conversationHeader">
+                        <div class="recname">{{ send.name }}</div>
+                        <div class="message" *ngIf="send.chats.length>0">{{send.chats[send.chats.length-1]}}</div>
+                    
+                    </div>
+                    
+                 </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>

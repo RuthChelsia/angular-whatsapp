@@ -1,0 +1,49 @@
+<div id="container" *ngIf="sender; else defaultBackGround">
+  <div *ngFor="let data of senders">
+    <!-- <div id="container" *ngIf="data.name==name"> -->
+      <div id="header">
+        <div class="avatarSection">
+          <div class="picture">
+            <img mat-card-avatar [src]="data.displayPic">
+          </div>
+
+          <div class="nameSection">{{data.name}}</div>
+        </div>
+        <div class="actionButtons">
+          <img src="../../assets/attached.png" />
+          <img src="../../assets/moreVertIcon.png" />
+        </div>
+      </div>
+      <div id="body">
+        <div class="message">
+
+          <div class="messageContent">
+
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+
+        <div id="textarea">
+          <textarea></textarea>
+        </div>
+        <div id="micIcon">
+          <img src="../../assets/voiceIcon.png" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-template  #defaultBackGround>
+    <div id="chatPlaceholder">
+
+      <img width="300" src="../assets/phoneIcon.png" />
+      <h3>Keep your phone connected</h3>
+      <p>
+        WhatsApp connects your phone to sync messages. To reduce data<br />
+        usage, connect to your phone to Wi-Fi.
+      </p>
+      <div class="seperator"></div>
+
+      <p>WhatsApp is available <a href="#">Get it here</a></p>
+    </div>
+  </ng-template>
